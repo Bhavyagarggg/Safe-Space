@@ -1,0 +1,18 @@
+{
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "rewrites": [
+    {
+      "source": "/api/backend/:path*",
+      "destination": "https://your-backend-url.onrender.com/:path*"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://your-project-id.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "your-supabase-anon-key",
+    "NEXT_PUBLIC_API_URL": "https://your-backend-url.onrender.com"
+  }
+}
